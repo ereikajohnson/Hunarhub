@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Handmade Products - HunarHub</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Hunar<span>Hub</span></a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="join-btn">Join HunarHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Products Hero -->
+    <section class="products-hero">
+        <p class="small-heading">HANDMADE WITH LOVE</p>
+
+        <h1>Discover Something <span>Unique.</span></h1>
+
+        <p>
+            Shop handmade creations and support the talented people
+            behind every product.
+        </p>
+
+        <div class="product-search">
+            <input
+                type="text"
+                id="productSearch"
+                placeholder="Search pots, jewellery, crafts..."
+            >
+
+            <button id="productSearchButton">Search</button>
+        </div>
+    </section>
+
+    <!-- Product Marketplace -->
+    <section class="products-section section-padding">
+
+        <div class="product-heading">
+            <div>
+                <p class="small-heading">THE LOCAL COLLECTION</p>
+                <h2>Explore Handmade Products</h2>
+            </div>
+
+            <button id="cartButton" class="cart-button">
+                🛒 Cart (<span id="cartCount">0</span>)
+            </button>
+        </div>
+
+        <!-- Product Categories -->
+        <div class="product-filters">
+            <button class="product-filter active" data-category="All">
+                All Products
+            </button>
+
+            <button class="product-filter" data-category="Pottery">
+                Pottery
+            </button>
+
+            <button class="product-filter" data-category="Jewellery">
+                Jewellery
+            </button>
+
+            <button class="product-filter" data-category="Home Decor">
+                Home Decor
+            </button>
+
+            <button class="product-filter" data-category="Textiles">
+                Textiles
+            </button>
+
+            <button class="product-filter" data-category="Handicrafts">
+                Handicrafts
+            </button>
+        </div>
+
+        <!-- Product Cards -->
+        <div class="product-container" id="productContainer">
+            <!-- Products will be added using JavaScript -->
+        </div>
+
+        <p class="no-results" id="productNoResults" hidden>
+            No products found. Try another search.
+        </p>
+
+    </section>
+
+    <!-- Shopping Cart -->
+    <section class="cart-section section-padding" id="shoppingCart">
+
+        <div class="section-heading">
+            <p class="small-heading">YOUR SELECTED ITEMS</p>
+            <h2>Shopping Cart</h2>
+        </div>
+
+        <div id="cartItems">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+
+        <div class="cart-total">
+            <h3>Total: ₹<span id="cartTotal">0</span></h3>
+
+            <button id="checkoutButton" class="join-btn">
+                Proceed to Checkout
+            </button>
+
+            <p id="checkoutMessage" class="form-message"></p>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="index.html" class="logo">Hunar<span>Hub</span></a>
+
+            <p>
+                Every handmade product supports a local dream.
+            </p>
+
+            <p class="copyright">
+                © 2026 HunarHub. Supporting local entrepreneurs.
+            </p>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+
+</body>
+</html>

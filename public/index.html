@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HunarHub - Discover Local Talent</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Hunar<span>Hub</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#artisans">Explore Artisans</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="join-btn">Join as Artisan</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="small-heading">SUPPORT LOCAL. CELEBRATE TALENT.</p>
+
+            <h1>Every Skill Has a Story.<br>
+                <span>Discover Yours.</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover talented local artisans, explore handmade
+                products, and connect with skilled professionals
+                in your community.
+            </p>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search for artisans, products or skills..."
+                >
+
+                <button id="searchButton">Search</button>
+            </div>
+
+            <a href="#artisans" class="explore-btn">
+                Explore Local Talent →
+            </a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories section-padding" id="categories">
+
+        <div class="section-heading">
+            <p class="small-heading">EXPLORE BY CATEGORY</p>
+            <h2>Find the Skill You Need</h2>
+            <p>Connect with skilled people who bring ideas to life.</p>
+        </div>
+
+        <div class="category-container">
+
+            <button class="category-card" data-category="All">
+                <span class="category-icon">✦</span>
+                <h3>All Skills</h3>
+                <p>Explore everyone</p>
+            </button>
+
+            <button class="category-card" data-category="Cobbler">
+                <span class="category-icon">👞</span>
+                <h3>Cobblers</h3>
+                <p>Shoe repair and care</p>
+            </button>
+
+            <button class="category-card" data-category="Potter">
+                <span class="category-icon">🏺</span>
+                <h3>Potters</h3>
+                <p>Traditional pottery</p>
+            </button>
+
+            <button class="category-card" data-category="Tailor">
+                <span class="category-icon">🧵</span>
+                <h3>Tailors</h3>
+                <p>Stitching and alterations</p>
+            </button>
+
+            <button class="category-card" data-category="Artisan">
+                <span class="category-icon">🎨</span>
+                <h3>Artisans</h3>
+                <p>Handcrafted creations</p>
+            </button>
+
+            <button class="category-card" data-category="Small Vendor">
+                <span class="category-icon">🛍️</span>
+                <h3>Local Vendors</h3>
+                <p>Everyday local products</p>
+            </button>
+
+        </div>
+    </section>
+
+    <!-- Featured Artisans Section -->
+    <section class="artisans section-padding" id="artisans">
+
+        <div class="section-heading">
+            <p class="small-heading">MADE WITH SKILL AND CARE</p>
+            <h2>Meet Our Local Entrepreneurs</h2>
+            <p>Discover the people and stories behind every creation.</p>
+        </div>
+
+        <div class="artisan-container" id="artisanContainer">
+
+            <!-- Artisan cards will be added using JavaScript -->
+
+        </div>
+
+        <p class="no-results" id="noResults" hidden>
+            No artisans found. Try another search.
+        </p>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-padding" id="about">
+
+        <div class="about-content">
+            <p class="small-heading">OUR PURPOSE</p>
+
+            <h2>Local Skills Deserve a Bigger Platform.</h2>
+
+            <p>
+                HunarHub connects talented micro-entrepreneurs with
+                customers looking for trusted services and unique
+                handmade products.
+            </p>
+
+            <p>
+                From traditional pottery to expert tailoring, we help
+                local talent gain visibility, reach more customers,
+                and create new income opportunities.
+            </p>
+
+            <a href="#artisans" class="explore-btn">
+                Discover Local Talent →
+            </a>
+        </div>
+
+        <div class="impact-container">
+
+            <div class="impact-card">
+                <h3>Local</h3>
+                <p>Discover nearby talent</p>
+            </div>
+
+            <div class="impact-card">
+                <h3>Unique</h3>
+                <p>Celebrate handmade products</p>
+            </div>
+
+            <div class="impact-card">
+                <h3>Meaningful</h3>
+                <p>Support small businesses</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <h2>Your Skills Deserve to Be Seen.</h2>
+
+        <p>
+            Join HunarHub and connect your talent with more customers.
+        </p>
+
+        <a href="#" class="join-btn">Become an Artisan</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="logo">Hunar<span>Hub</span></a>
+
+            <p>
+                Empowering local talent. Preserving traditional skills.
+                Building stronger communities.
+            </p>
+
+            <p class="copyright">
+                © 2026 HunarHub. Supporting local entrepreneurs.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Service | HunarHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="service-header">
+        <nav class="service-nav">
+            <a href="index.html" class="service-logo">HunarHub</a>
+
+            <div class="service-nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="services.html">Services</a>
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="service-hero">
+        <h1>Find the Right Local Expert</h1>
+        <p>Connect with skilled local workers and bring your ideas to life.</p>
+    </section>
+
+    <section class="service-list-section">
+        <h2>Explore Our Services</h2>
+        <p class="service-intro">
+            Choose a service and send a request to a local professional.
+        </p>
+
+        <div class="service-cards">
+
+            <div class="service-card">
+                <div class="service-icon">👞</div>
+                <h3>Cobbler</h3>
+                <p>Shoe repair, stitching and footwear maintenance.</p>
+                <button onclick="selectService('Cobbler')">
+                    Request Service
+                </button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🏺</div>
+                <h3>Potter</h3>
+                <p>Clay pots, handmade pottery and custom designs.</p>
+                <button onclick="selectService('Potter')">
+                    Request Service
+                </button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🧵</div>
+                <h3>Tailor</h3>
+                <p>Clothing alterations, stitching and custom outfits.</p>
+                <button onclick="selectService('Tailor')">
+                    Request Service
+                </button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Artisan</h3>
+                <p>Handmade crafts, artwork and personalised creations.</p>
+                <button onclick="selectService('Artisan')">
+                    Request Service
+                </button>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🛍️</div>
+                <h3>Small Vendor</h3>
+                <p>Local products and customised orders from small businesses.</p>
+                <button onclick="selectService('Small Vendor')">
+                    Request Service
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="service-form-section" id="requestFormSection">
+        <h2>Send a Service Request</h2>
+        <p>Enter your details so the service provider can understand your needs.</p>
+
+        <form id="serviceRequestForm">
+
+            <div class="service-form-group">
+                <label for="customerName">Full Name</label>
+                <input type="text" id="customerName" required
+                    placeholder="Enter your full name">
+            </div>
+
+            <div class="service-form-group">
+                <label for="customerEmail">Email Address</label>
+                <input type="email" id="customerEmail" required
+                    placeholder="Enter your email">
+            </div>
+
+            <div class="service-form-group">
+                <label for="customerPhone">Phone Number</label>
+                <input type="tel" id="customerPhone" required
+                    pattern="[0-9]{10}" maxlength="10"
+                    placeholder="Enter your 10-digit phone number">
+            </div>
+
+            <div class="service-form-group">
+                <label for="serviceCategory">Service Category</label>
+                <select id="serviceCategory" required>
+                    <option value="">Select a service</option>
+                    <option value="Cobbler">Cobbler</option>
+                    <option value="Potter">Potter</option>
+                    <option value="Tailor">Tailor</option>
+                    <option value="Artisan">Artisan</option>
+                    <option value="Small Vendor">Small Vendor</option>
+                </select>
+            </div>
+
+            <div class="service-form-group">
+                <label for="serviceLocation">Your Location</label>
+                <input type="text" id="serviceLocation" required
+                    placeholder="Enter your town or area">
+            </div>
+
+            <div class="service-form-group">
+                <label for="serviceDescription">Describe the Service You Need</label>
+                <textarea id="serviceDescription" rows="4" required
+                    placeholder="Explain what you need..."></textarea>
+            </div>
+
+            <div class="service-form-group">
+                <label for="preferredDate">Preferred Date</label>
+                <input type="date" id="preferredDate" required>
+            </div>
+
+            <div class="service-form-group">
+                <label for="serviceBudget">Estimated Budget (₹)</label>
+                <input type="number" id="serviceBudget" min="0"
+                    placeholder="Enter your budget">
+            </div>
+
+            <button type="submit" class="service-submit-btn">
+                Submit Request
+            </button>
+
+            <p id="serviceMessage"></p>
+
+        </form>
+    </section>
+
+    <footer class="service-footer">
+        <p>© 2026 HunarHub | Supporting Local Skills and Businesses</p>
+    </footer>
+
+    <script src="services.js"></script>
+</body>
+</html>
+```

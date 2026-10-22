@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - HunarHub</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                Hunar<span>Hub</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="index.html#artisans">Explore Artisans</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="join-btn">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Login Section -->
+    <section class="auth-section">
+
+        <div class="auth-container">
+
+            <div class="auth-info">
+                <p class="small-heading">WELCOME BACK</p>
+
+                <h1>Your Community of Talent Awaits.</h1>
+
+                <p>
+                    Sign in to discover local talent, manage your
+                    services, and support small businesses.
+                </p>
+
+                <div class="auth-message">
+                    <span>✦</span>
+                    <p>
+                        Every purchase supports a dream.
+                        Every skill tells a story.
+                    </p>
+                </div>
+            </div>
+
+            <div class="auth-form-container">
+
+                <h2>Welcome Back!</h2>
+
+                <p class="form-description">
+                    Please enter your details to sign in.
+                </p>
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+                        <label for="userType">Login As</label>
+
+                        <select id="userType" name="userType" required>
+                            <option value="">Select your account type</option>
+                            <option value="customer">Customer</option>
+                            <option value="entrepreneur">Entrepreneur</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-option">
+                            <input type="checkbox" id="rememberMe">
+                            Remember me
+                        </label>
+
+                        <a href="#" id="forgotPassword">
+                            Forgot password?
+                        </a>
+                    </div>
+
+                    <button type="submit" class="auth-submit">
+                        Sign In
+                    </button>
+
+                    <p id="loginMessage" class="form-message"></p>
+
+                </form>
+
+                <p class="switch-form">
+                    Don't have an account?
+                    <a href="register.html">Create an account</a>
+                </p>
+
+                <p class="back-home">
+                    <a href="index.html">← Back to Home</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="index.html" class="logo">
+                Hunar<span>Hub</span>
+            </a>
+
+            <p>
+                Empowering local talent and supporting small businesses.
+            </p>
+
+            <p class="copyright">
+                © 2026 HunarHub. Supporting local entrepreneurs.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const loginForm = document.getElementById("loginForm");
+        const loginMessage = document.getElementById("loginMessage");
+
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            
+
+            loginMessage.style.color = "#946b28";
+        });
+
+        document.getElementById("forgotPassword")
+            .addEventListener("click", function(event) {
+                event.preventDefault();
+
+                alert("Password recovery will be available in a future update.");
+            });
+    </script>
+
+</body>
+</html>

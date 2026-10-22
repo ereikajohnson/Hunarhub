@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register - HunarHub</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                Hunar<span>Hub</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#categories">Categories</a></li>
+                <li><a href="index.html#artisans">Explore Artisans</a></li>
+            </ul>
+
+            <div class="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="register.html" class="join-btn">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Registration Section -->
+    <section class="auth-section">
+
+        <div class="auth-container">
+
+            <div class="auth-info">
+                <p class="small-heading">JOIN THE HUNARHUB COMMUNITY</p>
+
+                <h1>Turn Your Skills Into Opportunities.</h1>
+
+                <p>
+                    Create your account to discover local talent,
+                    showcase your skills, and connect with customers.
+                </p>
+
+                <div class="auth-message">
+                    <span>✦</span>
+                    <p>
+                        Your talent matters. Your work deserves
+                        recognition. Start your journey with HunarHub.
+                    </p>
+                </div>
+            </div>
+
+            <div class="auth-form-container">
+
+                <h2>Create an Account</h2>
+
+                <p class="form-description">
+                    Fill in your details to get started.
+                </p>
+
+                <form id="registerForm">
+
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            required
+                            minlength="2"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            pattern="[0-9]{10}"
+                            maxlength="10"
+                            title="Enter a 10-digit phone number"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="accountType">Account Type</label>
+
+                        <select id="accountType" name="accountType" required>
+                            <option value="">Select account type</option>
+                            <option value="customer">Customer</option>
+                            <option value="entrepreneur">Micro-Entrepreneur</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="categoryGroup" hidden>
+                        <label for="skillCategory">Your Skill Category</label>
+
+                        <select id="skillCategory" name="skillCategory">
+                            <option value="">Select your skill</option>
+                            <option value="Cobbler">Cobbler</option>
+                            <option value="Potter">Potter</option>
+                            <option value="Tailor">Tailor</option>
+                            <option value="Artisan">Artisan</option>
+                            <option value="Small Vendor">Small Vendor</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Create Password</label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="At least 8 characters"
+                            minlength="8"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Re-enter your password"
+                            minlength="8"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="auth-submit">
+                        Create Account
+                    </button>
+
+                    <p id="registerMessage" class="form-message"></p>
+
+                </form>
+
+                <p class="switch-form">
+                    Already have an account?
+                    <a href="login.html">Sign in</a>
+                </p>
+
+                <p class="back-home">
+                    <a href="index.html">← Back to Home</a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="index.html" class="logo">
+                Hunar<span>Hub</span>
+            </a>
+
+            <p>
+                Empowering local talent and supporting small businesses.
+            </p>
+
+            <p class="copyright">
+                © 2026 HunarHub. Supporting local entrepreneurs.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const accountType = document.getElementById("accountType");
+        const categoryGroup = document.getElementById("categoryGroup");
+        const skillCategory = document.getElementById("skillCategory");
+
+        const registerForm = document.getElementById("registerForm");
+        const registerMessage = document.getElementById("registerMessage");
+
+        /* Show Skill Category for Entrepreneurs */
+
+        accountType.addEventListener("change", function() {
+
+            if (accountType.value === "entrepreneur") {
+                categoryGroup.hidden = false;
+                skillCategory.required = true;
+            } else {
+                categoryGroup.hidden = true;
+                skillCategory.required = false;
+                skillCategory.value = "";
+            }
+
+        });
+
+        /* Check Registration Form */
+
+        registerForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
+
+            if (password !== confirmPassword) {
+                registerMessage.textContent = "Passwords do not match.";
+                registerMessage.style.color = "red";
+                return;
+            }
+
+            
+
+           
+
+        });
+    </script>
+
+</body>
+</html>
